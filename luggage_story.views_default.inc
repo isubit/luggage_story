@@ -34,8 +34,8 @@ function luggage_story_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'luggage-gridrow4';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Header: Global: Text area */
   $handler->display->display_options['header']['area']['id'] = 'area';
@@ -52,9 +52,10 @@ Click on the photo or name to view the story.
   $handler->display->display_options['fields']['field_story_images']['field'] = 'field_story_images';
   $handler->display->display_options['fields']['field_story_images']['label'] = '';
   $handler->display->display_options['fields']['field_story_images']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_story_images']['empty'] = '<div class="story-image-placeholder"></div>';
   $handler->display->display_options['fields']['field_story_images']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_story_images']['settings'] = array(
-    'image_style' => 'medium',
+    'image_style' => 'story_thumbnail',
     'image_link' => 'content',
   );
   $handler->display->display_options['fields']['field_story_images']['delta_offset'] = '0';
@@ -65,6 +66,8 @@ Click on the photo or name to view the story.
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -116,7 +119,7 @@ Click on the photo or name to view the story.
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Feature Stories';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'node';
+  $handler->display->display_options['css_class'] = 'luggage-grid luggage-grid-no-float';
   $handler->display->display_options['defaults']['header'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;

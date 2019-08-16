@@ -1,0 +1,33 @@
+.view-id-stories.view-display-id-page .views-field-title h2 {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+.story-image-placeholder {
+  width: 100%;
+  height: 0;
+  background: #ddd;
+  padding-top: 78.125%;
+  margin-bottom: 1rem;
+}
+
+.view-id-stories.view-display-id-page .views-field-field-story-images {
+  margin-bottom: 1rem;
+}
+
+.view-id-stories.view-display-id-page .views-field-field-story-images a {
+  display: block;
+}
+
+.view-id-stories.view-display-id-page .views-field-field-story-images img {
+  margin: 0;
+  border-radius: 0.15rem;
+}
+
+@media (max-width: 768px) {
+  
+  .story-image-placeholder {
+    display: none;
+  }
+}

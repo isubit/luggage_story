@@ -21,6 +21,30 @@ function luggage_story_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function luggage_story_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: story_thumbnail.
+  $styles['story_thumbnail'] = array(
+    'label' => 'Story Thumbnail (640x500)',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 640,
+          'height' => 500,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function luggage_story_node_info() {
